@@ -1,5 +1,5 @@
 # Auto Login
-attempt to login to a firewall if there is no internet connection
+Attempt to login to a known firewall if there is no internet connection
 
 Use provided (inside jar) phantomJS binary or take its path as first argument.
 

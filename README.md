@@ -7,7 +7,7 @@ Use provided (inside jar) phantomJS binary or take its path as first argument.
 
 `config.properties` (in working directory) format :
 ```
-address=(firewall address)
+address=(firewall url)
 page_title=(title of the page, leave blank to not check)
 username_field_id=(DOM id if the username field)
 pass_field_id=(DOM id if the password field)

@@ -4,3 +4,4 @@ mvn package -Plinux32
 mvn package -Plinux64
 mvn package -Pwindows
 mvn package -Pmacosx
+mvn package -Plight

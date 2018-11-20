@@ -245,6 +245,34 @@
                 </plugins>
             </build>
         </profile>
+		<profile>
+            <id>light</id>
+            <build>
+                <finalName>${project.artifactId}-${project.version}-light</finalName>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <version>${jar_plugin.version}</version>
+                        <configuration>
+                            <outputDirectory>${jar_plugin.output_dir}</outputDirectory>
+                            <excludes>
+                                <exclude>phantomjs/linux32/*</exclude>
+                                <exclude>phantomjs/linux64/*</exclude>
+                                <exclude>phantomjs/windows/*</exclude>
+								<exclude>phantomjs/macosx/*</exclude>
+                                <exclude>config.properties</exclude>
+                            </excludes>
+                            <archive>
+                                <manifest>
+                                    <mainClass>${project.mainclass}</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
     </profiles>
 
 </project>

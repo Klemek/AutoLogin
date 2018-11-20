@@ -11,8 +11,13 @@
     <packaging>jar</packaging>
 
     <properties>
+        <project.mainclass>fr.klemek.autologin.App</project.mainclass>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <jar_plugin.output_dir>download</jar_plugin.output_dir>
+        <jar_plugin.version>3.1.0</jar_plugin.version>
     </properties>
 
     <repositories>
@@ -115,16 +120,131 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>${jar_plugin.version}</version>
                 <configuration>
+                    <outputDirectory>${jar_plugin.output_dir}</outputDirectory>
+                    <excludes>
+                        <exclude>config.properties</exclude>
+                    </excludes>
                     <archive>
                         <manifest>
-                            <mainClass>fr.klemek.autologin.App</mainClass>
+                            <mainClass>${project.mainclass}</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>linux32</id>
+            <build>
+                <finalName>${project.artifactId}-${project.version}-linux32</finalName>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <version>${jar_plugin.version}</version>
+                        <configuration>
+                            <outputDirectory>${jar_plugin.output_dir}</outputDirectory>
+                            <excludes>
+                                <exclude>phantomjs/linux64/*</exclude>
+                                <exclude>phantomjs/windows/*</exclude>
+                                <exclude>phantomjs/macosx/*</exclude>
+                                <exclude>config.properties</exclude>
+                            </excludes>
+                            <archive>
+                                <manifest>
+                                    <mainClass>${project.mainclass}</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>linux64</id>
+            <build>
+                <finalName>${project.artifactId}-${project.version}-linux64</finalName>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <version>${jar_plugin.version}</version>
+                        <configuration>
+                            <outputDirectory>${jar_plugin.output_dir}</outputDirectory>
+                            <excludes>
+                                <exclude>phantomjs/linux32/*</exclude>
+                                <exclude>phantomjs/windows/*</exclude>
+                                <exclude>phantomjs/macosx/*</exclude>
+                                <exclude>config.properties</exclude>
+                            </excludes>
+                            <archive>
+                                <manifest>
+                                    <mainClass>${project.mainclass}</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>windows</id>
+            <build>
+                <finalName>${project.artifactId}-${project.version}-windows</finalName>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <version>${jar_plugin.version}</version>
+                        <configuration>
+                            <outputDirectory>${jar_plugin.output_dir}</outputDirectory>
+                            <excludes>
+                                <exclude>phantomjs/linux32/*</exclude>
+                                <exclude>phantomjs/linux64/*</exclude>
+                                <exclude>phantomjs/macosx/*</exclude>
+                                <exclude>config.properties</exclude>
+                            </excludes>
+                            <archive>
+                                <manifest>
+                                    <mainClass>${project.mainclass}</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>macosx</id>
+            <build>
+                <finalName>${project.artifactId}-${project.version}-macosx</finalName>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <version>${jar_plugin.version}</version>
+                        <configuration>
+                            <outputDirectory>${jar_plugin.output_dir}</outputDirectory>
+                            <excludes>
+                                <exclude>phantomjs/linux32/*</exclude>
+                                <exclude>phantomjs/linux64/*</exclude>
+                                <exclude>phantomjs/windows/*</exclude>
+                                <exclude>config.properties</exclude>
+                            </excludes>
+                            <archive>
+                                <manifest>
+                                    <mainClass>${project.mainclass}</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 </project>

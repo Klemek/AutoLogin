@@ -1,9 +1,11 @@
 # Auto Login
 attempt to login to a firewall if there is no internet connection
 
-Uses PhantomJS, first argument is path of binary otherwise it will extract it in a temporary folder
+Use provided (inside jar) phantomJS binary or take its path as first argument.
 
-`config.properties` format :
+## Configuration
+
+`config.properties` (in working directory) format :
 ```
 address=(firewall address)
 page_title=(title of the page, leave blank to not check)
@@ -17,3 +19,10 @@ test_ports=80,8080 (ports to check, leave blank to skip)
 test_address=http://portquiz.net (url to reach, leave blank to skip)
 test_head=<html>\n<head>\n<title>Outgoing Port Tester</title> (starting of the response content)
 ```
+
+## Downloads
+* [Any platform (94 MB)](https://raw.githubusercontent.com/Klemek/AutoLogin/master/download/autologin-1.0.jar)
+* [Linux 32bit(34 MB)](https://raw.githubusercontent.com/Klemek/AutoLogin/master/download/autologin-1.0-linux32.jar)
+* [Linux 64bit (33 MB)](https://raw.githubusercontent.com/Klemek/AutoLogin/master/download/autologin-1.0-linux64.jar)
+* [Windows (25 MB)](https://raw.githubusercontent.com/Klemek/AutoLogin/master/download/autologin-1.0-windows.jar)
+* [MacOSX (24 MB)](https://raw.githubusercontent.com/Klemek/AutoLogin/master/download/autologin-1.0-macosx.jar)

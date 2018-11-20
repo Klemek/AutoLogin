@@ -15,6 +15,7 @@ button_id=(DOM id if the button)
 login=(login to use, leave blank to ask)
 pass=(password to use, leave blank to ask)
 
+#next is connection tests configuration, these values (without comments) should work
 test_ports=80,8080 (ports to check, leave blank to skip)
 test_address=http://portquiz.net (url to reach, leave blank to skip)
 test_head=<html>\n<head>\n<title>Outgoing Port Tester</title> (starting of the response content)

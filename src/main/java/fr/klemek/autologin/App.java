@@ -151,13 +151,13 @@ public class App {
             Logger.log("Form filled successfully");
 
             driver.quit();
-            return true;
+            return false;
 
         } catch (Exception e) {
             Logger.log(e);
             if (driver != null)
                 driver.quit();
-            return false;
+            return true;
         }
     }
 

@@ -22,7 +22,7 @@ test_head=<html>\n<head>\n<title>Outgoing Port Tester</title> (starting of the r
 
 ## Downloads
 * [Any platform (94 MB)](https://raw.githubusercontent.com/Klemek/AutoLogin/master/download/autologin-1.0.jar)
-* [Linux 32bit(34 MB)](https://raw.githubusercontent.com/Klemek/AutoLogin/master/download/autologin-1.0-linux32.jar)
+* [Linux 32bit (34 MB)](https://raw.githubusercontent.com/Klemek/AutoLogin/master/download/autologin-1.0-linux32.jar)
 * [Linux 64bit (33 MB)](https://raw.githubusercontent.com/Klemek/AutoLogin/master/download/autologin-1.0-linux64.jar)
 * [Windows (25 MB)](https://raw.githubusercontent.com/Klemek/AutoLogin/master/download/autologin-1.0-windows.jar)
 * [MacOSX (24 MB)](https://raw.githubusercontent.com/Klemek/AutoLogin/master/download/autologin-1.0-macosx.jar)

@@ -85,11 +85,12 @@ public class App {
             return;
         }
 
-        if (driverExecution()) return;
-
-        verifyConnection();
-
-        System.exit(0);
+        if (driverExecution()){
+            System.exit(1);
+        }else{
+            verifyConnection();
+            System.exit(0);
+        }
     }
 
     private static boolean driverExecution() {

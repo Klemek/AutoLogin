@@ -1,3 +1,6 @@
+[![Language grade: Java](https://img.shields.io/lgtm/grade/java/g/Klemek/AutoLogin.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Klemek/AutoLogin/context:java)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/Klemek/AutoLogin.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Klemek/AutoLogin/alerts/)
+
 # Auto Login
 Attempt to login to a known firewall if there is no internet connection
 

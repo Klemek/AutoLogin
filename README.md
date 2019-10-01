@@ -1,4 +1,4 @@
-[![Scc Count Badge](https://sloc.xyz/github/klemek/autologin/?category=code)](https://github.com/boyter/scc/#badges-beta)
+[![Scc Count Badge](https://sloc.xyz/github/klemek/AutoLogin/?category=code)](https://github.com/boyter/scc/#badges-beta)
 [![Language grade: Java](https://img.shields.io/lgtm/grade/java/g/Klemek/AutoLogin.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Klemek/AutoLogin/context:java)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/Klemek/AutoLogin.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Klemek/AutoLogin/alerts/)
 
